@@ -1,0 +1,10 @@
+export _bbsBaseDir=/opt/talisman
+export _bbsLogDir=logs
+export _bbsEtcDir=etc
+export _bbsUser=bbs
+export _bbsGroup=bbs
+
+bbsLogEvent() {
+	echo "$(date +"%c")  $(hostname -s) talisman: $1"
+}
+
