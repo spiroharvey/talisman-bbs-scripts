@@ -7,10 +7,9 @@ StartLimitIntervalSec=0
 Type=simple
 Restart=always
 RestartSec=1
-User=bbs
 WorkingDirectory=/opt/talisman
 ExecStart=/opt/talisman/servo
 
 [Install]
 WantedBy=multi-user.target
-
+WantedBy=default.target

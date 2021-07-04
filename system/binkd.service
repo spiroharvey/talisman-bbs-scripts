@@ -8,10 +8,10 @@ ExecStart=/usr/local/sbin/binkd -DC /opt/talisman/bink/binkd.conf
 ;PIDFile=/opt/talisman/ftn/binkd.pid
 ExecReload=/bin/kill -HUP ${MAINPID}
 ExecStop=/bin/kill ${MAINPID}
-User=bbs
-Group=bbs
 Restart=on-failure
 RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
+WantedBy=default.target
+
