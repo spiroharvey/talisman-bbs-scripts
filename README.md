@@ -24,7 +24,7 @@ It's possible to run all the services as your own BBS user rather than root.
 To do so, copy the .service files into **.config/systemd/user** inside
 your BBS's home directory.
 
-As root, run the command: **loginctl enable-linger <bbsUserName>**
+As root, run the command: **loginctl enable-linger *bbsUserName***
 
 Now you can run systemctl from your BBS user account.
 
