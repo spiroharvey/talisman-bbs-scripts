@@ -5,8 +5,9 @@
 logFile="$_bbsLogDir/sem_watch.log"
 cd $bbsBaseDir
 
-inotifywait -qme modify -o $logFile *.sem |
+inotifywait -qme modify *.sem |
 	while read event; do
+		bbsLogEvent $event >> $logFile
 		bbsLogEvent "./postie scan" >> $logFile
 		./postie scan
 	done
